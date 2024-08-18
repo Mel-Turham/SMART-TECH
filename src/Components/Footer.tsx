@@ -5,8 +5,8 @@ import { Logo } from '../assets';
 
 const Footer = () => {
 	return (
-		<footer className='text-white divide-y divide-white bg-blue'>
-			<Container className='grid grid-cols-4 gap-5 py-14'>
+		<footer className='text-white divide-y divide-white bg-blue pt-14'>
+			<Container className='grid grid-cols-4 gap-5 pb-9'>
 				<div className='flex flex-col gap-6'>
 					<Image src={Logo} width={100} isLoading={true} />
 					<p className='font-normal text-white'>
@@ -49,14 +49,23 @@ const Footer = () => {
 							startContent={<Mail className='w-6 h-6 text-lightGray' />}
 							size='lg'
 							radius='none'
-              className='caret-black'
+							className='caret-black'
 						/>
 
-						<Button isIconOnly color='primary' type='submit' size='lg' radius='none' className='h-full'>
-							<Send/>
+						<Button
+							isIconOnly
+							color='primary'
+							type='submit'
+							size='lg'
+							radius='none'
+							className='h-full'
+						>
+							<Send />
 						</Button>
 					</form>
-					<p className='font-light text-white'>Soyez à l'écoute de nos activités</p>
+					<p className='font-light text-white'>
+						Soyez à l'écoute de nos activités
+					</p>
 				</div>
 			</Container>
 
