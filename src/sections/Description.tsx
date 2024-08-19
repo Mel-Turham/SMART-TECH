@@ -4,8 +4,8 @@ import { img } from '../assets';
 
 const Description = () => {
 	return (
-		<div className='flex justify-between gap-8'>
-			<div className='flex flex-col w-1/2 gap-8'>
+		<div className='flex justify-between gap-8 max-sm:flex-col'>
+			<div className='flex flex-col gap-8 lg:w-1/2 sm:w-full '>
 				<div className='flex flex-col gap-4'>
 					<h2 className='text-4xl font-semibold text-blue'>
 						Qui sommes-nous ?
@@ -47,8 +47,12 @@ const Description = () => {
 				</Button>
 			</div>
 			{/* Image description there!!!!! */}
-			<div className='flex items-center justify-center w-1/2'>
-				<Image src={img}  className='object-cover w-full h-full mix-blend-multiply' radius='none' />
+			<div className='flex items-center justify-center lg:w-1/2 sm:w-full'>
+				<Image
+					src={img}
+					className='object-cover w-full h-full mix-blend-multiply'
+					radius='none'
+				/>
 			</div>
 		</div>
 	);

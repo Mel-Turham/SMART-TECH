@@ -6,7 +6,7 @@ import { Logo } from '../assets';
 const Footer = () => {
 	return (
 		<footer className='text-white divide-y divide-white bg-blue pt-14'>
-			<Container className='grid grid-cols-4 gap-5 pb-9'>
+			<Container className='grid gap-10 lg:grid-cols-4 pb-9 md:grid-cols-2 lg:gap-0'>
 				<div className='flex flex-col gap-6'>
 					<Image src={Logo} width={100} isLoading={true} />
 					<p className='font-normal text-white'>

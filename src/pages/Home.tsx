@@ -9,16 +9,16 @@ const Home = () => {
 	return (
 		<main className=''>
 			<Carousel />
-			<Container className='py-20 bg-[#fcfcfc]'>
+			<Container className='py-6 lg:py-20 bg-[#fcfcfc]'>
 				<Description />
 			</Container>
-			<Container className='py-20'>
+			<Container className='py-6 lg:py-20'>
 				<NosServices />
 			</Container>
-			<Container className='py-20'>
+			<Container className='py-6 lg:py-20'>
 				<Realisations />
 			</Container>
-			<Container className='py-20 bg-[#FDFDFD]'>
+			<Container className='py-6 lg:py-20 bg-[#FDFDFD]'>
 				<Partenaires />
 			</Container>
 		</main>

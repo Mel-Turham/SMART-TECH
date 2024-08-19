@@ -18,7 +18,7 @@ const Partenaires = () => {
 				title='Nos partenaires'
 				text=' Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt culpa quibusdam modi labore quo possimus, assumenda vitae fugiat tempora libero. '
 			/>
-			<div className='grid grid-cols-8 gap-6 mt-16'>
+			<div className='hidden grid-cols-8 gap-6 mt-16 lg:grid'>
 				<Image src={com_1} width={200} height={120} className='object-cover ' />
 				<Image src={com_2} width={200} height={120} className='object-cover' />
 				<Image src={com_3} width={200} height={120} className='object-cover' />

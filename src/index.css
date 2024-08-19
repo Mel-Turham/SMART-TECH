@@ -22,3 +22,10 @@ p{
 	border-radius: 5px;
 	margin: 0 auto;
 }
+
+@media(max-width:767px){
+	.line::after{
+		left: 0%;
+	transform: translate(0%);
+	}
+}

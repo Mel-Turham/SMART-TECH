@@ -17,7 +17,7 @@ export default function Realisations() {
 				title='Nos realisations'
 				text=' Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt culpa quibusdam modi labore quo possimus, assumenda vitae fugiat tempora libero. '
 			/>
-			<div className='grid grid-cols-3 gap-5 mt-16'>
+			<div className='grid gap-5 mt-16 lg:grid-cols-3 md:grid-cols-2'>
 				{Array.from({ length: 6 }, (_, index) => (
 					<Card radius='sm' key={index}>
 						<CardHeader>
