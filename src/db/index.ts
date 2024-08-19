@@ -1,21 +1,17 @@
 import {
-	Code,
-	Globe,
 	BadgeEuro,
-	MonitorCog,
-	GraduationCap,
 	Building,
 	Cctv,
+	Code,
+	Globe,
+	GraduationCap,
 	HardHat,
-	LucideProps,
-} from 'lucide-react';
-import { ForwardRefExoticComponent, RefAttributes } from 'react';
+	MonitorCog,
+} from '../assets';
 
 type ServicesTypes = {
 	id: number;
-	icon: ForwardRefExoticComponent<
-		Omit<LucideProps, 'ref'> & RefAttributes<SVGSVGElement>
-	>;
+	icon: string;
 	title: string;
 	desc: string;
 };

@@ -1,7 +1,7 @@
 import Container from './Container';
 import { Logo } from '../assets';
 import { Link, NavLink } from 'react-router-dom';
-import { Button } from '@nextui-org/react';
+import { Button, Image } from '@nextui-org/react';
 import { Menu, X } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
@@ -109,14 +109,23 @@ const Navbar = () => {
 				{/* Logo */}
 				<Link
 					to='/'
-					className='w-[110px] h-[100px] flex items-center justify-start'
+					className='w-[110px] bg-lightGray flex items-center justify-start'
 				>
-					<img
+					{/* <img
 						src={Logo}
 						alt='Logo smart tech'
 						title='Smart-Tech'
 						loading='lazy'
 						className='w-full mix-blend-multiply'
+					/> */}
+
+					<Image
+						src={Logo}
+						alt='SMART-TECH'
+						loading='lazy'
+						title='SMART_TECH'
+						radius='none'
+						className='overflow-hidden'
 					/>
 				</Link>
 				{/* Navigations menu */}
@@ -144,18 +153,23 @@ const Navbar = () => {
 			</Container>
 			{/* mobile nav-bar */}
 			<header className='sticky top-0 z-20 flex items-center justify-between w-full py-4 bg-white shadow-lg pe-6 lg:hidden'>
-				
 				{/* Logo */}
-				<Link
-					to='/'
-					className='z-20'
-				>
-					<img
+				<Link to='/' className='z-20 overflow-hidden'>
+					{/* <img
 						src={Logo}
 						alt='Logo smart tech'
 						title='Smart-Tech'
 						loading='lazy'
 						className='w-28 mix-blend-multiply'
+					/> */}
+
+					<Image
+						src={Logo}
+						alt='SMART-TECH'
+						loading='lazy'
+						title='SMART-TECH'
+						className='w-20 h-20 '
+						
 					/>
 				</Link>
 				{/* Navigations menu */}

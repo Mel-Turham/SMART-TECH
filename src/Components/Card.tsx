@@ -4,16 +4,12 @@ import {
 	CardBody,
 	CardFooter,
 	CardHeader,
+	Image,
 } from '@nextui-org/react';
-import { LucideProps } from 'lucide-react';
-
-import { ForwardRefExoticComponent, RefAttributes } from 'react';
 
 type ServicesTypes = {
 	id: number;
-	icon?: ForwardRefExoticComponent<
-		Omit<LucideProps, 'ref'> & RefAttributes<SVGSVGElement>
-	>;
+	icon?: string;
 	title: string;
 	desc: string;
 };
@@ -24,25 +20,29 @@ interface Props {
 
 const CardService = ({ service }: Props) => {
 	return (
-		<Card radius='sm' className='px-5 py-7'>
-			<CardHeader>
-				{/* <span>{</service.icon>}</span> */}
-				<h3 className='text-2xl font-semibold'>{service.title}</h3>
-			</CardHeader>
-			<CardBody>
-				<p className='text-base'>{service.desc}</p>
-			</CardBody>
-			<CardFooter>
-				<Button
-					color='primary'
-					variant='bordered'
-					radius='sm'
-					className='font-semibold'
-				>
-					En savoir plus
-				</Button>
-			</CardFooter>
-		</Card>
+		<>
+			<Card radius='sm' className='px-5 py-7'>
+				<CardHeader className='flex items-center gap-3'>
+					<div className='flex items-center justify-center w-20 h-20 '>
+						<Image src={service.icon} width={60} />
+					</div>
+					<h3 className='text-lg font-bold text-black/70'>{service.title}</h3>
+				</CardHeader>
+				<CardBody>
+					<p className='text-base'>{service.desc}</p>
+				</CardBody>
+				<CardFooter>
+					<Button
+						color='primary'
+						variant='bordered'
+						radius='sm'
+						className='font-semibold'
+					>
+						En savoir plus
+					</Button>
+				</CardFooter>
+			</Card>
+		</>
 	);
 };
 

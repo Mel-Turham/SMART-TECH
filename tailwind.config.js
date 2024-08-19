@@ -11,7 +11,7 @@ export default {
 			lightGray: '#979aa1',
 			black: '#000',
 			white: '#ffff',
-			blue: ' #2563EA',
+			blue: '#2563EA',
 			transparent: 'transparent',
 		},
 		fontFamily: {
