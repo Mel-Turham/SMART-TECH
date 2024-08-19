@@ -26,16 +26,19 @@ const CardService = ({ service }: Props) => {
 	return (
 		<Card radius='sm' className='px-5 py-7'>
 			<CardHeader>
-				{/* <span>{service.icon}</span> */}
+				{/* <span>{</service.icon>}</span> */}
 				<h3 className='text-2xl font-semibold'>{service.title}</h3>
 			</CardHeader>
 			<CardBody>
-				<p className='text-base'>
-					{service.desc}
-				</p>
+				<p className='text-base'>{service.desc}</p>
 			</CardBody>
 			<CardFooter>
-				<Button color='primary' variant='bordered' radius='sm' className='font-semibold'>
+				<Button
+					color='primary'
+					variant='bordered'
+					radius='sm'
+					className='font-semibold'
+				>
 					En savoir plus
 				</Button>
 			</CardFooter>
