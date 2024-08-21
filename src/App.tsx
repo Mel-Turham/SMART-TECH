@@ -8,9 +8,8 @@ const App = () => {
 			<Routes>
 				<Route path='/' element={<Layout />}>
 					<Route index element={<Home />} />
-					<Route path='contact' element={<h1>Contact page!!!</h1>}/>
 				</Route>
-				<Route path='*' element={<Error/>}/>
+				<Route path='*' element={<Error />} />
 			</Routes>
 		</BrowserRouter>
 	);
