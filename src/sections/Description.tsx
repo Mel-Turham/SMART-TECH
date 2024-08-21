@@ -47,7 +47,7 @@ const Description = () => {
 				</Button>
 			</div>
 			{/* Image description there!!!!! */}
-			<div className='flex items-center justify-center lg:w-1/2 sm:w-full'>
+			<div className='items-center justify-center hidden sm:flex lg:w-1/2'>
 				<Image
 					src={img}
 					className='object-cover w-full h-full mix-blend-multiply'

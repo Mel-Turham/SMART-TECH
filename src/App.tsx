@@ -1,5 +1,5 @@
 import { Route, Routes, BrowserRouter } from 'react-router-dom';
-import { Error, Home } from './pages';
+import { Contact, Error, Home } from './pages';
 import Layout from './Layouts/Layout';
 
 const App = () => {
@@ -8,6 +8,7 @@ const App = () => {
 			<Routes>
 				<Route path='/' element={<Layout />}>
 					<Route index element={<Home />} />
+					<Route path='contact' element={<Contact />} />
 				</Route>
 				<Route path='*' element={<Error />} />
 			</Routes>
