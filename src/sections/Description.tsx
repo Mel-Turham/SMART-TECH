@@ -4,7 +4,7 @@ import { img } from '../assets';
 
 const Description = () => {
 	return (
-		<div className='flex justify-between gap-8 max-sm:flex-col'>
+		<div className='flex justify-between gap-8 max-sm:flex-col-reverse'>
 			<div className='flex flex-col gap-8 lg:w-1/2 sm:w-full '>
 				<div className='flex flex-col gap-4'>
 					<h2 className='text-4xl font-semibold text-blue'>

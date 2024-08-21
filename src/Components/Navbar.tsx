@@ -97,7 +97,7 @@ const Navbar = () => {
 
 	const variant = {
 		hidden: {
-			x: '-100%',
+			x: '-100vw',
 		},
 		show: {
 			x: '0',
@@ -105,7 +105,7 @@ const Navbar = () => {
 	};
 	return (
 		<>
-			<Container className='sticky top-0 z-20 flex items-center justify-between bg-white shadow-lg ps-8 pe-16 max-md:hidden lg:flex'>
+			<Container className='sticky top-0 z-20 flex items-center justify-between bg-white shadow-lg ps-8 pe-16 max-md:hidden sm:hidden lg:flex'>
 				{/* Logo */}
 				<Link
 					to='/'
@@ -177,7 +177,7 @@ const Navbar = () => {
 					variants={variant}
 					animate={isOpen ? 'show' : 'hidden'}
 					transition={{ duration: 0.4, ease: 'easeInOut' }}
-					className='fixed top-0 right-0 flex flex-col justify-center h-screen gap-8 px-8 py-10 bg-white shadow-md md:w-1/2 max-sm:w-full'
+					className='fixed top-0 right-0 flex flex-col justify-center h-screen gap-8 px-8 py-10 bg-white shadow-md md:w-full max-sm:w-full md:pt-24 md:ps-4 md:justify-start'
 				>
 					{Links.map((link) => {
 						return (
