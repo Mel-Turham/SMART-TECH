@@ -4,7 +4,7 @@ import { Link, NavLink } from 'react-router-dom';
 import { Button, Image } from '@nextui-org/react';
 import { Menu, X } from 'lucide-react';
 import { AnimatePresence, motion } from 'framer-motion';
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 // import { Facebook, Linkedin, Locate, Mail, Phone,  Twitter } from 'lucide-react';F
 
 const Links = [
@@ -45,55 +45,20 @@ const Links = [
 	},
 ];
 
-{
-	/* <Container className='flex items-center justify-between py-3 font-medium border-b border-solid border-lightGray/30 text-black/70'>
-				 phone 
-				<div className='flex items-center justify-center w-1/4 gap-4 mx-auto'>
-					<Phone />
-					<div>
-						<span>Phone: (237)694898069</span>
-						<br />
-						<span className='text-center'>(237)682764575</span>
-					</div>
-				</div>
-				{/* localisation */
-}
-// <div className='flex items-center justify-center w-1/4 gap-4 mx-auto'>
-// 	<Locate />
-// 	<div>
-// 		<span>Yaounde-Cameroun</span>
-// 		<br />
-// 		<span>Douala-Cameroun</span>
-// 	</div>
-// </div>
-{
-	/* email */
-}
-// <div className='flex items-center justify-center w-1/4 gap-4 mx-auto'>
-// 	<Mail />
-// 	<span>techsmart035@gmail.com</span>
-// </div>
-{
-	/* socials */
-}
-// <div className='flex items-center justify-center w-1/4 gap-4 mx-auto'>
-// 	{/* facebook */}
-// 	<span>
-// 		<Facebook />
-// 	</span>
-// 	{/* Twitter */}
-// 	<span>
-// 		<Twitter />
-// 	</span>
-// 	{/* Linkedin */}
-// 	<span>
-// 		<Linkedin />
-// 	</span>
-// </div>
-// </Container> */}
-
 const Navbar = () => {
 	const [isOpen, setIsOpen] = useState(false);
+	const ref = useRef(null);
+
+	useEffect(() => {
+		const handlerCloseNav = (e: MouseEvent) => {
+			if (isOpen && e.target !== ref.current) {
+				setIsOpen(false);
+			}
+		};
+
+		document.addEventListener('click', handlerCloseNav);
+		return () => document.removeEventListener('click', handlerCloseNav);
+	}, [isOpen]);
 
 	const variant = {
 		hidden: {
@@ -149,8 +114,8 @@ const Navbar = () => {
 								<NavLink
 									className={({ isActive }) =>
 										isActive
-											? 'duration-300 ease-in-out hover:text-blue trasition-all text-blue'
-											: 'duration-300 ease-in-out hover:text-blue trasition-all '
+											? 'duration-300 ease-in-out hover:text-blue trasition-all text-blue-600'
+											: 'duration-300 ease-in-out hover:text-blue-600 trasition-all '
 									}
 									to={link.path}
 								>
@@ -183,6 +148,7 @@ const Navbar = () => {
 				</Link>
 				{/* Navigations menu */}
 				<motion.menu
+					ref={ref}
 					variants={variant}
 					animate={isOpen ? 'show' : 'hidden'}
 					transition={{ duration: 0.4, ease: 'easeInOut' }}

@@ -16,7 +16,7 @@ const Contact = () => {
 
 				<div className='max-w-5xl mx-auto mt-12 sm:mt-16'>
 					<div className='grid grid-cols-1 gap-6 px-8 text-center md:px-0 md:grid-cols-3'>
-						<div className='overflow-hidden bg-white rounded-xl'>
+					<div className='overflow-hidden bg-white rounded-xl'>
 							<div className='p-6'>
 								<svg
 									className='flex-shrink-0 w-10 h-10 mx-auto text-gray-400'

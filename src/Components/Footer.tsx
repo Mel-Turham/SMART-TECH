@@ -5,7 +5,7 @@ import { Logo } from '../assets';
 
 const Footer = () => {
 	return (
-		<footer className='text-white divide-y divide-white bg-blue pt-14'>
+		<footer className='text-white bg-blue-600 divide-y divide-white pt-14'>
 			<Container className='grid gap-10 lg:grid-cols-4 pb-9 md:grid-cols-2 lg:gap-10'>
 				<div className='flex flex-col gap-6'>
 					<Image src={Logo} width={100} isLoading={true} />
@@ -46,7 +46,7 @@ const Footer = () => {
 					<form action='#' className='flex bg-[#E4E4E7] shadow-md'>
 						<Input
 							placeholder='Your email adress'
-							startContent={<Mail className='w-6 h-6 text-lightGray' />}
+							startContent={<Mail className='w-6 h-6 text-gray-500' />}
 							size='lg'
 							radius='none'
 							className='caret-black'
