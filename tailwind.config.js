@@ -7,17 +7,14 @@ export default {
 		'./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}',
 	],
 	theme: {
-		colors: {
-			lightGray: '#979aa1',
-			black: '#000',
-			white: '#ffff',
-			blue: '#2563EA',
-			transparent: 'transparent',
-		},
 		fontFamily: {
 			Poppins: ['Poppins', 'sans-serif'],
 		},
-		extend: {},
+		extend: {
+			backgroundImage: {
+				'bg-hero': 'url(assets/images/hero.jpg)',
+			},
+		},
 	},
 	darkMode: 'class',
 	plugins: [nextui()],
