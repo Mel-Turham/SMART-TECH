@@ -6,14 +6,10 @@ body {
 	@apply font-Poppins;
 }
 
-p{
-	@apply text-black/70 font-medium
-}
-
-.line::after{
+.line::after {
 	content: '';
 	position: absolute;
-	background-color:#2563EA;
+	background-color: #2563ea;
 	bottom: -20px;
 	left: 50%;
 	transform: translate(-50%);
@@ -23,9 +19,9 @@ p{
 	margin: 0 auto;
 }
 
-@media(max-width:767px){
-	.line::after{
+@media (max-width: 767px) {
+	.line::after {
 		left: 0%;
-	transform: translate(0%);
+		transform: translate(0%);
 	}
 }
